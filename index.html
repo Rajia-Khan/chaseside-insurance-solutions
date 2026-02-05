@@ -40,7 +40,7 @@
 
       <!-- CENTER TEXT (MIDDLE) -->
       <div class="flex-1 flex flex-col justify-center items-center text-center px-4 sm:px-6  mb-[165px]">
-        <p class="font-bold lg:text-[30px] sm:text-[26px] text-[22px] leading-tight lg:leading-[15px] mb-6 lg:mb-9">
+        <p class="font-bold lg:text-[30px] sm:text-[26px] text-[22px] leading-tight lg:leading-[15px] mb-0 md:mb-6 lg:mb-9">
           New Website
         </p>
 
@@ -60,10 +60,10 @@
       <!-- CONTACT INFO (TOP) -->
       <div class="flex justify-center md:justify-end mb-12">
         <div class="text-center md:text-right space-y-1">
-          <p class="font-extrabold text-[18px] sm:text-[20px] lg:text-[21px] leading-[30px]">
+          <p class="font-extrabold text-[18px] sm:text-[20px] lg:text-[30px] leading-[30px]">
             0203 096 2830
           </p>
-          <p class="font-bold text-[14px] sm:text-[15px] lg:text-[16px] leading-[30px]">
+          <p class="font-bold text-[14px] sm:text-[15px] lg:text-[20px] leading-[30px]">
             enquiries@chasesidebrokers.co.uk
           </p>
         </div>
@@ -159,8 +159,9 @@
   </div>
   <!-- MODAL POPUP -->
   <div id="enquiryModal"
-    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300">
-    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden animate-modal relative">
+    class="fixed inset-0 z-50 hidden overflow-y-auto items-start justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300">
+    <div
+      class="bg-white rounded-2xl shadow-2xl w-full max-w-md md:max-w-xl lg:max-w-xl overflow-hidden animate-modal relative my-auto">
       <!-- Close Button -->
       <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-black transition-colors p-2">
         <i class="fa-solid fa-xmark text-2xl"></i>
@@ -174,21 +175,33 @@
               class="inline-flex items-center justify-center w-16 h-16 bg-[#1CA893]/10 text-[#1CA893] rounded-full mb-4">
               <i class="fa-solid fa-envelope-open-text text-2xl"></i>
             </div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">Coming Soon</h2>
-            <p class="text-gray-500">We're putting the finishing touches on our new enquiry system. Leave your email and
-              we'll notify you as soon as we're live!</p>
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Get in-touch</h2>
+            <p class="text-gray-500 text-sm">Have a question or want to learn more about our services? Send us a message
+              and we'll get back to you shortly.</p>
           </div>
 
           <form id="enquiryForm" class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Name</label>
+              <input type="text" required
+                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#1CA893] focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                placeholder="Your name">
+            </div>
             <div>
               <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
               <input type="email" required
                 class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#1CA893] focus:border-transparent outline-none transition-all placeholder:text-gray-400"
                 placeholder="you@example.com">
             </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+              <textarea required rows="4"
+                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#1CA893] focus:border-transparent outline-none transition-all placeholder:text-gray-400 resize-none"
+                placeholder="How can we help?"></textarea>
+            </div>
             <button type="submit"
               class="w-full bg-[#1CA893] text-white py-4 rounded-lg font-bold text-lg hover:bg-[#158e7c] transition-all transform hover:translate-y-[-2px] active:translate-y-[0] shadow-md">
-              Notify Me
+              Send Message
             </button>
           </form>
 
